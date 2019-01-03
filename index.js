@@ -9,8 +9,24 @@ count += " "
 }}
 
 
+function dwarfRollCall(call) {
+  var count = '';
+  for(let i = 0.5 * call.length; i < call.length; i++)  {
+    var dwarf = call[i]  
+    count += `${i + 1}. ${dwarf}`;
+    count += " "
+  }
+  return count
+}
 
-var calls = ["earth","wind","fire","water","heart"]
+
+
+
+
+
+
+
+ var calls = ["earth","wind","fire","water","heart"]
 
 function summonCaptainPlanet(calls) {
 var n = 0;
@@ -21,7 +37,8 @@ n++;
 return calls
 }
 
-function longPlaneteerCalls(planeteerCalls) {
+
+function longPlaneteerCall(planeteerCalls) {
 var t = planeteerCalls.length;
 if (t < 4) {
 return false  
@@ -42,6 +59,16 @@ return 'no cheese!'
 } 
 
 
+var wordsWithB = []
+
+function wordsWithB(words) {
+words.forEach(function(word,i) {
+if (word.includes('b')) {
+wordsWithB.push(word)
+} 
+})
+return wordsWithB
+}
 
 
 
@@ -49,9 +76,7 @@ return 'no cheese!'
 
 
 
-
-
-
+wordsWithB([‘barn’, ‘house’, ‘apartment’]) => [‘barn’] wordsWithB([‘barn’, ‘house’, ‘bungalow’]) => [‘barn’, ‘bungalow’] wordsWithB([‘flat’, ‘house’, ‘apartment’]) => []
 
 
 
